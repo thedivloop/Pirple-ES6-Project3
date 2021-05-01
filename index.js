@@ -1,3 +1,4 @@
+const colors = require('colors');
 
 const MIN_FLOOR_A = -1;
 const MAX_FLOOR_A = 9;
@@ -35,7 +36,7 @@ class Lift {
     }
 
     static getLift(pax) {
-        console.log("Selecting lift...");
+        console.log("Selecting lift...".yellow);
         console.log("The passenger " + pax.id + " is at floor " + pax.startFloor + " and wants to go " + pax.direction + " to floor " + pax.destFloor);
         var assignedLift;
         if (pax.destFloor == -1 || pax.startFloor == -1) {
